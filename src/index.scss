@@ -1,0 +1,21 @@
+:root {
+  --orange: #f4b214; // To be considered later on
+  --yellow: #ffc107; // To be considered later on
+
+  --orange-dark: #ff7404; // Used for buttons, navlinks, headings underscores, prices
+  --white: #fff; // Used as background color in sections
+  --gray: #868e96; // Used for secondary text color in sections
+  --gray-dark: #343a40; // Used for heading text color in sections
+  --smoke: #f8f9fa; // Used as background color in sections
+  --font-family-sans-serif: 'Open Sans', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-sans-serif);
+}
