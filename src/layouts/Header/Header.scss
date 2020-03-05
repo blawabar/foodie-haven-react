@@ -21,7 +21,7 @@
       padding-left: 30px;
       padding-right: 30px;
       margin-top: 25px;
-      background-color: var(--orange);
+      background-color: var(--orange-dark);
       font-size: 15px;
       line-height: 3;
       text-transform: uppercase;
@@ -43,22 +43,23 @@
     letter-spacing: 2px;
 
     @media screen and (min-width: 768px) and (min-height: 1024px) {
-      font-size: 80px;
+      font-size: 60px;
     }
 
     @media screen and (min-width: 1024px) {
-      font-size: 100px;
+      font-size: 80px;
     }
   }
 
   &__catchline {
     margin-bottom: 10px;
     font-size: 20px;
+    font-weight: 300;
     text-transform: capitalize;
     letter-spacing: 1px;
 
     @media screen and (min-width: 1024px) {
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 }

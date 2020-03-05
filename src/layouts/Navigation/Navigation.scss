@@ -19,7 +19,7 @@
     &--is-anchored {
       position: fixed;
       top: 0;
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
 
@@ -60,15 +60,15 @@
       color: var(--white);
 
       @media screen and (min-width: 768px) {
-        font-size: 18px;
+        // font-size: 18px;
       }
 
       @media screen and (min-width: 1280px) {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       &.active {
-        color: var(--orange);
+        color: var(--orange-dark);
         font-weight: 700;
       }
     }
@@ -82,7 +82,7 @@
     background-color: transparent;
     border: none;
     outline: none;
-    color: var(--orange);
+    color: var(--orange-dark);
     font-size: 25px;
     line-height: $nav-height;
 
