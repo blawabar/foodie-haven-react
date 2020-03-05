@@ -1,4 +1,14 @@
 .footer {
-  background-color: var(--orange-dark);
-  color: var(--white);
+  background-color: var(--orange);
+
+  &__copyright-info {
+    font-size: 12px;
+    text-align: center;
+    line-height: 2.5;
+    color: var(--white);
+
+    @media screen and (min-width: 768px) {
+      font-size: 15px;
+    }
+  }
 }

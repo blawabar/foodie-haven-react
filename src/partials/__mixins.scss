@@ -1,0 +1,14 @@
+@mixin center-with-flex($justification: center, $alignment: center) {
+  display: flex;
+  justify-content: $justification;
+  align-items: $alignment;
+}
+
+@mixin use-wrapper() {
+  width: 90%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1280px) {
+    width: 1200px;
+  }
+}

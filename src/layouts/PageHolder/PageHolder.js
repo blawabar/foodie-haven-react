@@ -14,7 +14,7 @@ const PageHolder = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact strict path="/" component={Home} />
         <Route exact strict path="/menu/" component={Menu} />
         <Route exact strict path="/events/" component={Events} />
         <Route exact strict path="/chef/" component={Chef} />
