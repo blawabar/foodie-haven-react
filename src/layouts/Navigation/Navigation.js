@@ -1,11 +1,28 @@
 import React from "react";
 
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import "./Navigation.scss";
 
 const Navigation = () => {
+  const navigation = useRef(null);
+  const anchoredClass = useRef("navigation--is-anchored");
+
+  useEffect(() => {
+    document.addEventListener("scroll", evt => {
+      if (navigation.current) {
+        if (window.scrollY >= 100) {
+          navigation.current.classList.add(anchoredClass.current);
+        } else {
+          navigation.current.classList.remove(anchoredClass.current);
+        }
+      }
+    });
+
+    return () => document.removeEventListener("scroll");
+  }, []);
+
   const [isLinksListShown, setIsLinksListShown] = useState(false);
 
   const getLinksListClass = () =>
@@ -17,7 +34,7 @@ const Navigation = () => {
     isLinksListShown ? "fas fa-times" : "fas fa-bars";
 
   return (
-    <nav className="navigation">
+    <nav className="navigation" ref={navigation}>
       <ul className={getLinksListClass()}>
         <li className="navigation__link-item">
           <NavLink exact to="/">

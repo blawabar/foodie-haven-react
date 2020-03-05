@@ -11,9 +11,16 @@
   background-color: var(--black);
 
   @media screen and (min-width: 768px) {
-    position: sticky;
-    background-color: var(--orange);
+    position: absolute;
+    top: 25px;
     height: auto;
+    background-color: transparent;
+
+    &--is-anchored {
+      position: fixed;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+    }
   }
 
   &__links-list {
@@ -57,17 +64,12 @@
       }
 
       @media screen and (min-width: 1280px) {
-        font-size: 22px;
+        font-size: 20px;
       }
 
       &.active {
         color: var(--orange);
         font-weight: 700;
-
-        @media screen and (min-width: 768px) {
-          color: var(--black);
-          border-bottom: 2px solid var(--black);
-        }
       }
     }
   }
