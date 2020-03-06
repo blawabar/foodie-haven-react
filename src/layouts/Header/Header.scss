@@ -1,6 +1,9 @@
 @import '../../partials/_mixins';
 
 .main-header {
+  $vertical-spacing: 25px;
+  $horizontal-spacing: 30px;
+
   height: 75vh;
   background-image: url(../../images/salmon_1280.jpg);
   background-repeat: no-repeat;
@@ -18,26 +21,27 @@
 
     a {
       display: block;
-      padding-left: 30px;
-      padding-right: 30px;
-      margin-top: 25px;
+      padding-left: $horizontal-spacing;
+      padding-right: $horizontal-spacing;
+      margin-top: $vertical-spacing;
       background-color: var(--orange-dark);
       font-size: 15px;
       line-height: 3;
+      letter-spacing: 1px;
       text-transform: uppercase;
       text-decoration: none;
       color: white;
 
       @media screen and (min-width: 1024px) {
-        margin-top: 50px;
+        margin-top: $vertical-spacing * 2;
         font-size: 20px;
       }
     }
   }
 
   &__intro-heading {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: $vertical-spacing;
+    margin-bottom: $vertical-spacing;
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -52,10 +56,8 @@
   }
 
   &__catchline {
-    margin-bottom: 10px;
+    margin-bottom: $vertical-spacing;
     font-size: 20px;
-    font-weight: 300;
-    text-transform: capitalize;
     letter-spacing: 1px;
 
     @media screen and (min-width: 1024px) {

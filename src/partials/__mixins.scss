@@ -4,11 +4,11 @@
   align-items: $alignment;
 }
 
-@mixin use-wrapper() {
+@mixin use-wrapper($width: 1200px) {
   width: 90%;
   margin: 0 auto;
 
   @media screen and (min-width: 1280px) {
-    width: 1200px;
+    width: $width;
   }
 }

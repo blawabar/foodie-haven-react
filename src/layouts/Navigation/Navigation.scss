@@ -10,7 +10,7 @@
 
   background-color: var(--black);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (min-height: 1024px), (min-width: 1024px) {
     position: absolute;
     top: 25px;
     height: auto;
@@ -24,6 +24,8 @@
   }
 
   &__links-list {
+    @include use-wrapper(1024px);
+
     position: absolute;
     top: 100%;
     left: 0;
@@ -35,8 +37,7 @@
 
     transition: height 250ms;
 
-    @media screen and (min-width: 768px) {
-      @include use-wrapper();
+    @media screen and (min-width: 768px) and (min-height: 1024px), (min-width: 1024px) {
       @include center-with-flex($justification: space-evenly);
 
       position: static;
@@ -59,11 +60,8 @@
       text-decoration: none;
       color: var(--white);
 
-      @media screen and (min-width: 768px) {
-        // font-size: 18px;
-      }
-
       @media screen and (min-width: 1280px) {
+        width: 10%;
         font-size: 18px;
       }
 
@@ -86,7 +84,7 @@
     font-size: 25px;
     line-height: $nav-height;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (min-height: 1024px), (min-width: 1024px) {
       display: none;
     }
   }
