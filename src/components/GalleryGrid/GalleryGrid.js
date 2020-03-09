@@ -2,16 +2,16 @@ import React from "react";
 
 import "./GalleryGrid.scss";
 
+import Animator from "../Animator";
+
 const GalleryGrid = ({ images }) => {
   const generateImageContent = images => {
     if (Array.isArray(images) && images.length > 0) {
       return images.map((imageName, index) => {
         return (
-          <img
-            key={index}
-            src={require(`../../images/${imageName}`)}
-            alt={imageName}
-          />
+          <Animator key={index}>
+            <img src={require(`../../images/${imageName}`)} alt={imageName} />
+          </Animator>
         );
       });
     }

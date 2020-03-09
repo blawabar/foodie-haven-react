@@ -1,0 +1,30 @@
+.animator {
+  overflow: hidden;
+
+  & * {
+    animation: show-content 1000ms both;
+    animation-play-state: paused;
+
+    @keyframes show-content {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &--is-showing {
+    & * {
+      animation-play-state: running;
+    }
+  }
+}
