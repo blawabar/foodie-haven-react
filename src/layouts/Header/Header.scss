@@ -1,9 +1,7 @@
+@import '../../partials/variables';
 @import '../../partials/mixins';
 
 .main-header {
-  $vertical-spacing: 25px;
-  $horizontal-spacing: 30px;
-
   height: 75vh;
   background-image: url(../../images/salmon_1280.jpg);
   background-repeat: no-repeat;
@@ -23,7 +21,7 @@
       display: block;
       padding-left: $horizontal-spacing;
       padding-right: $horizontal-spacing;
-      margin-top: $vertical-spacing;
+      margin-top: $vertical-spacing * 0.7;
       background-color: var(--orange-dark);
       font-size: 15px;
       line-height: 3;
@@ -33,15 +31,17 @@
       color: white;
 
       @include use-mq-manager($mq-bp-lg) {
-        margin-top: $vertical-spacing * 2;
+        margin-top: $vertical-spacing * 1.5;
         font-size: 20px;
       }
     }
   }
 
   &__intro-heading {
-    margin-top: $vertical-spacing;
-    margin-bottom: $vertical-spacing;
+    $margin: $vertical-spacing * 0.8;
+
+    margin-top: $margin;
+    margin-bottom: $margin;
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -56,7 +56,7 @@
   }
 
   &__catchline {
-    margin-bottom: $vertical-spacing;
+    margin-bottom: $vertical-spacing * 0.6;
     font-size: 20px;
     letter-spacing: 1px;
 

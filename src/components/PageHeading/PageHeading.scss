@@ -1,0 +1,35 @@
+@import '../../partials/variables';
+
+.page-heading {
+  position: relative;
+  margin: $vertical-spacing 0 $vertical-spacing;
+  padding-bottom: $vertical-spacing;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+
+  &--is-small {
+    font-size: 18px;
+  }
+
+  &--is-normal {
+    font-size: 32px;
+  }
+
+  &--is-large {
+    font-size: 38px;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 100%;
+    left: 50%;
+    height: 2px;
+    width: 100px;
+    transform: translate(-50%, -2px);
+    background-color: var(--orange-dark);
+  }
+}

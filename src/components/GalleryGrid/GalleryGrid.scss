@@ -1,0 +1,23 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.gallery-grid {
+  margin: $vertical-spacing * 1.5 0 $vertical-spacing * 1.5;
+
+  @include use-mq-manager($mq-bp-lg) {
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    column-gap: 5%;
+    row-gap: 7.5%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: $vertical-spacing;
+
+    @include use-mq-manager($mq-bp-lg) {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -13,20 +13,6 @@
   }
 }
 
-// 0. Use vars to store keys values:
-$mq-bp-sm: 'breakpoint-sm';
-$mq-bp-md: 'breakpoint-md';
-$mq-bp-lg: 'breakpoint-lg';
-$mq-bp-xl: 'breakpoint-xl';
-
-// 1. Create map with MQ keys and values
-$media-queries: (
-  $mq-bp-sm: '(min-width: 768px)',
-  $mq-bp-md: '(min-width: 768px) and (min-height: 1024px)',
-  $mq-bp-lg: '(min-width: 1024px)',
-  $mq-bp-xl: '(min-width: 1280px)'
-);
-
 // 2. Create function which returns mq-value
 @function get-mq-value($breakpoint) {
   $value: null;

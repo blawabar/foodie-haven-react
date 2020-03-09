@@ -1,2 +1,8 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
 .home {
+  @include use-wrapper();
+
+  padding: $vertcial-padding-sm 0 $vertcial-padding-sm;
 }

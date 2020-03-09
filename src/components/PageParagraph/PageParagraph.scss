@@ -1,0 +1,9 @@
+@import '../../partials/variables';
+
+.page-paragraph {
+  margin: $vertical-spacing * 0.5 0 $vertical-spacing;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 2;
+  color: var(--gray-dark);
+}
