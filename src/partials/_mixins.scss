@@ -12,3 +12,85 @@
     width: $width;
   }
 }
+
+// 0. Use vars to store keys values:
+$mq-bp-sm: 'breakpoint-sm';
+$mq-bp-md: 'breakpoint-md';
+$mq-bp-lg: 'breakpoint-lg';
+$mq-bp-xl: 'breakpoint-xl';
+
+// 1. Create map with MQ keys and values
+$media-queries: (
+  $mq-bp-sm: '(min-width: 768px)',
+  $mq-bp-md: '(min-width: 768px) and (min-height: 1024px)',
+  $mq-bp-lg: '(min-width: 1024px)',
+  $mq-bp-xl: '(min-width: 1280px)'
+);
+
+// 2. Create function which returns mq-value
+@function get-mq-value($breakpoint) {
+  $value: null;
+
+  @if $breakpoint {
+    $value: map-get(
+      $map: $media-queries,
+      $key: $breakpoint
+    );
+  } @else {
+    @error 'Please provide a valid breakpoint value.';
+  }
+
+  @return $value;
+}
+
+// 3. Create function which decodes mq args
+// 3.1 If arglist is a vector
+//  - take all args and put them together into a list,
+//  - output the list content as a single string in which every item must be separated by a space and a comma,
+// 3.2 If arglist has a single value
+//  - return just a valid mq value if present
+
+@function decode-mq-args($args...) {
+  $result: null;
+  $list-len: length($args);
+  $mq-value: null;
+
+  @if $list-len > 1 {
+    @for $i from 1 through $list-len {
+      $breakpoint: nth($args, $i);
+      $mq-value: get-mq-value($breakpoint);
+
+      @if $mq-value {
+        @if $i == 1 {
+          $result: $mq-value;
+        } @else {
+          $result: '#{$result}, #{$mq-value}';
+        }
+      } @else {
+        @error 'There is no media query value for "#{$breakpoint}" in the media-queries map.';
+      }
+    }
+  } @else if $list-len == 1 {
+    $breakpoint: nth($args, 1);
+    $mq-value: get-mq-value($breakpoint);
+
+    @if $mq-value {
+      $result: $mq-value;
+    } @else {
+      @error 'There is no media query value for "#{$breakpoint}" in the media-queries map.';
+    }
+  }
+
+  @return $result;
+}
+
+// 4. Create a mixin which uses the decode-mq-args function
+@mixin use-mq-manager($breakpoints...) {
+  $mq-value: decode-mq-args($breakpoints...);
+
+  @if $mq-value {
+    @media screen and #{$mq-value} {
+      @content;
+    }
+  }
+}

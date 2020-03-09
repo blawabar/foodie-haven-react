@@ -10,7 +10,7 @@
 
   background-color: var(--black);
 
-  @media screen and (min-width: 768px) and (min-height: 1024px), (min-width: 1024px) {
+  @include use-mq-manager($mq-bp-md, $mq-bp-lg) {
     position: absolute;
     top: 25px;
     height: auto;
@@ -37,7 +37,7 @@
 
     transition: height 250ms;
 
-    @media screen and (min-width: 768px) and (min-height: 1024px), (min-width: 1024px) {
+    @include use-mq-manager($mq-bp-md, $mq-bp-lg) {
       @include center-with-flex($justification: space-evenly);
 
       position: static;
@@ -60,7 +60,7 @@
       text-decoration: none;
       color: var(--white);
 
-      @media screen and (min-width: 1280px) {
+      @include use-mq-manager($mq-bp-xl) {
         width: 10%;
         font-size: 18px;
       }
@@ -84,7 +84,7 @@
     font-size: 25px;
     line-height: $nav-height;
 
-    @media screen and (min-width: 768px) and (min-height: 1024px), (min-width: 1024px) {
+    @include use-mq-manager($mq-bp-md, $mq-bp-lg) {
       display: none;
     }
   }
