@@ -1,0 +1,25 @@
+@import '../../partials/variables';
+
+.dish-item {
+  padding: $horizontal-spacing;
+  margin-bottom: $vertical-spacing;
+  background-color: var(--white);
+  border-radius: 15px;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--orange-dark);
+  }
+}

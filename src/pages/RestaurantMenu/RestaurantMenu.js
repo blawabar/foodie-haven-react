@@ -3,13 +3,19 @@ import React from "react";
 import "./RestaurantMenu.scss";
 
 import PageHeading from "../../components/PageHeading/";
+import Animator from "../../components/Animator";
 
-// 1. It will use MenuContainer component which accepts data gathered by a fetch request
+import DishesMenuContainer from "../../components/DishesMenuContainer";
 
 const RestaurantMenu = () => {
   return (
-    <section className="menu">
-      <PageHeading large>discover our menu</PageHeading>
+    <section className="restaurant-menu">
+      <div className="restaurant-menu__wrapper">
+        <Animator>
+          <PageHeading large>discover our menu</PageHeading>
+        </Animator>
+        <DishesMenuContainer />
+      </div>
     </section>
   );
 };

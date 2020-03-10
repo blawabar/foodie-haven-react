@@ -1,8 +1,11 @@
 @import '../../partials/variables';
 @import '../../partials/mixins';
 
-.menu {
-  @include use-wrapper();
-
+.restaurant-menu {
   padding: $vertical-padding-sm 0 $vertical-padding-sm;
+  background-color: var(--smoke);
+
+  &__wrapper {
+    @include use-wrapper();
+  }
 }

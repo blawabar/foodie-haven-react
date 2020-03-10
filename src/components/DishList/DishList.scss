@@ -1,0 +1,12 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.dish-list {
+  margin-top: $vertical-spacing * 2;
+
+  @include use-mq-manager($mq-bp-sm) {
+    display: grid;
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 2.5%;
+  }
+}
