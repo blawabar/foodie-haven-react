@@ -10,27 +10,21 @@
   text-transform: uppercase;
   font-weight: 300;
 
-  &--is-small {
-    font-size: 18px;
+  $list: ('--is-small', (18px, 20px)), ('--is-normal', (32px, 34px)), ('--is-large', (38px, 40px));
 
-    @include use-mq-manager($mq-bp-xl) {
-      font-size: 20px;
-    }
-  }
+  @each $item in $list {
+    $modifier: nth($item, 1);
 
-  &--is-normal {
-    font-size: 32px;
+    $sizes: nth($item, 2);
+    $small-size: nth($sizes, 1);
+    $large-size: nth($sizes, 2);
 
-    @include use-mq-manager($mq-bp-xl) {
-      font-size: 34px;
-    }
-  }
+    &#{$modifier} {
+      font-size: $small-size;
 
-  &--is-large {
-    font-size: 38px;
-
-    @include use-mq-manager($mq-bp-xl) {
-      font-size: 40px;
+      @include use-mq-manager($mq-bp-xl) {
+        font-size: $large-size;
+      }
     }
   }
 
