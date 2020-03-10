@@ -1,4 +1,5 @@
 @import '../../partials/variables';
+@import '../../partials/mixins';
 
 .page-heading {
   position: relative;
@@ -11,14 +12,26 @@
 
   &--is-small {
     font-size: 18px;
+
+    @include use-mq-manager($mq-bp-xl) {
+      font-size: 20px;
+    }
   }
 
   &--is-normal {
     font-size: 32px;
+
+    @include use-mq-manager($mq-bp-xl) {
+      font-size: 34px;
+    }
   }
 
   &--is-large {
     font-size: 38px;
+
+    @include use-mq-manager($mq-bp-xl) {
+      font-size: 40px;
+    }
   }
 
   &:after {
