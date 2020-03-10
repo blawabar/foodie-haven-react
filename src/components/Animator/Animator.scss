@@ -1,7 +1,7 @@
 .animator {
   overflow: hidden;
 
-  & * {
+  & > * {
     animation: show-content 1000ms both;
     animation-play-state: paused;
 
@@ -23,7 +23,7 @@
   }
 
   &--is-showing {
-    & * {
+    & > * {
       animation-play-state: running;
     }
   }
