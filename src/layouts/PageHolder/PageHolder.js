@@ -3,7 +3,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Home from "../../pages/Home";
-import Menu from "../../pages/Menu";
+import RestaurantMenu from "../../pages/RestaurantMenu";
 import Events from "../../pages/Events";
 import Chef from "../../pages/Chef";
 import Gallery from "../../pages/Gallery";
@@ -15,7 +15,7 @@ const PageHolder = () => {
     <>
       <Switch>
         <Route exact strict path="/" component={Home} />
-        <Route exact strict path="/menu/" component={Menu} />
+        <Route exact strict path="/menu/" component={RestaurantMenu} />
         <Route exact strict path="/events/" component={Events} />
         <Route exact strict path="/chef/" component={Chef} />
         <Route exact strict path="/gallery/" component={Gallery} />

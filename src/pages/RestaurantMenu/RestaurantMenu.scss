@@ -1,0 +1,8 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.menu {
+  @include use-wrapper();
+
+  padding: $vertical-padding-sm 0 $vertical-padding-sm;
+}
