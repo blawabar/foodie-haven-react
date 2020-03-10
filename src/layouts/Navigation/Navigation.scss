@@ -11,6 +11,7 @@
   z-index: 10;
 
   background-color: var(--black);
+  transition: background-color 250ms, height 250ms;
 
   @include use-mq-manager($mq-bp-md, $mq-bp-lg) {
     position: absolute;
@@ -22,6 +23,10 @@
       position: fixed;
       top: 0;
       background-color: rgba(0, 0, 0, 0.7);
+
+      .navigation__links-list {
+        height: $nav-height * 1.25;
+      }
     }
   }
 
@@ -43,7 +48,7 @@
       @include center-with-flex($justification: space-evenly);
 
       position: static;
-      height: 1.5 * $nav-height;
+      height: $nav-height * 1.5;
       background-color: transparent;
     }
 

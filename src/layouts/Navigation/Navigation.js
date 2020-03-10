@@ -10,7 +10,7 @@ const Navigation = () => {
   const anchoredClass = useRef("navigation--is-anchored");
 
   useEffect(() => {
-    document.addEventListener("scroll", evt => {
+    const handleOnScroll = () => {
       if (navigation.current) {
         if (window.scrollY >= 100) {
           navigation.current.classList.add(anchoredClass.current);
@@ -18,9 +18,11 @@ const Navigation = () => {
           navigation.current.classList.remove(anchoredClass.current);
         }
       }
-    });
+    };
 
-    return () => document.removeEventListener("scroll");
+    document.addEventListener("scroll", handleOnScroll);
+
+    return () => document.removeEventListener("scroll", handleOnScroll);
   }, []);
 
   const [isLinksListShown, setIsLinksListShown] = useState(false);
