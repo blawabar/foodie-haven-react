@@ -1,0 +1,84 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.event-item {
+  margin-bottom: $vertical-spacing * 1.5;
+  background-color: var(--smoke);
+
+  &:first-of-type {
+    margin-top: $vertical-spacing * 3;
+  }
+
+  @include use-mq-manager($mq-bp-sm) {
+    display: flex;
+
+    &:nth-of-type(even) &__image-container {
+      order: 1;
+    }
+  }
+
+  &__image-container {
+    @include use-mq-manager($mq-bp-sm) {
+      flex-basis: 40%;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+
+    @include use-mq-manager($mq-bp-sm) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__info {
+    padding: $vertical-spacing;
+
+    @include use-mq-manager($mq-bp-sm) {
+      flex-basis: 60%;
+    }
+    a {
+      display: block;
+      width: 150px;
+      background-color: var(--orange-dark);
+      font-size: 12px;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 3;
+      color: var(--smoke);
+
+      @include use-mq-manager($mq-bp-xl) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: $vertical-spacing / 3;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--orange-dark);
+
+    @include use-mq-manager($mq-bp-xl) {
+      font-size: 24px;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: var(--gray-dark);
+
+    @include use-mq-manager($mq-bp-xl) {
+      font-size: 16px;
+    }
+  }
+}

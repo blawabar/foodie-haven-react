@@ -1,2 +1,8 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
 .events {
+  @include use-wrapper();
+
+  padding: $vertical-padding-sm 0 $vertical-padding-sm;
 }
