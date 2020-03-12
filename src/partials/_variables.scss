@@ -7,6 +7,7 @@ $vertical-padding-md: 100px;
 $vertical-padding-large: 120px;
 
 // 0. Use vars to store keys values:
+$mq-bp-xs: 'breakpoint-xs';
 $mq-bp-sm: 'breakpoint-sm';
 $mq-bp-md: 'breakpoint-md';
 $mq-bp-lg: 'breakpoint-lg';
@@ -14,6 +15,7 @@ $mq-bp-xl: 'breakpoint-xl';
 
 // 1. Create map with MQ keys and values
 $media-queries: (
+  $mq-bp-xs: '(min-width: 533px)',
   $mq-bp-sm: '(min-width: 768px)',
   $mq-bp-md: '(min-width: 768px) and (min-height: 1024px)',
   $mq-bp-lg: '(min-width: 1024px)',

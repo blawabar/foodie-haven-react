@@ -1,2 +1,12 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
 .chef {
+  @include use-wrapper();
+  padding: $vertical-padding-sm 0;
+
+  &__daily-routines,
+  &__detailed-info {
+    padding-top: $vertical-padding-xs;
+  }
 }

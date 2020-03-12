@@ -1,0 +1,14 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.carousel {
+  padding-top: $vertical-padding-xs;
+
+  &__container {
+    overflow-x: hidden;
+  }
+
+  &__slide-holder {
+    display: flex;
+  }
+}

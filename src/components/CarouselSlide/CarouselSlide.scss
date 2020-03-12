@@ -1,0 +1,41 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+
+  @include use-mq-manager($mq-bp-xs) {
+    flex-direction: row;
+  }
+
+  &__image-container {
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    @include use-mq-manager($mq-bp-xs) {
+      position: relative;
+      width: 50%;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__info {
+    padding: 0 $vertical-spacing / 2;
+
+    @include use-mq-manager($mq-bp-xs) {
+      width: 50%;
+    }
+  }
+}
