@@ -1,0 +1,15 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.carousel-container {
+  overflow-x: hidden;
+
+  @include use-mq-manager($mq-bp-xl) {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  &__slide-holder {
+    display: flex;
+  }
+}
