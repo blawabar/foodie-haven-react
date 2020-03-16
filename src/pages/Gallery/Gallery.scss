@@ -1,2 +1,56 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
 .gallery {
+  @include use-wrapper();
+
+  padding: $vertical-padding-sm 0;
+
+  &__masonry-grid {
+    display: grid;
+    grid-auto-rows: 87.5vh;
+
+    @include use-mq-manager($mq-bp-lg) {
+      grid-auto-rows: 250px;
+      grid-template-columns: repeat(2, 50%);
+      grid-auto-flow: row;
+      padding-top: $vertical-padding-sm;
+    }
+
+    .image-frame {
+      position: relative;
+      margin: 5px;
+      overflow: hidden;
+      cursor: pointer;
+
+      @include use-mq-manager($mq-bp-lg) {
+        &:nth-child(4n + 1) {
+          grid-row: span 2;
+        }
+
+        &:nth-child(4n) {
+          grid-row: span 2;
+          grid-column: span 2;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+
+        transition: transform 0.5s;
+      }
+
+      &:hover {
+        img {
+          transform: scale(2);
+        }
+      }
+    }
+  }
 }
