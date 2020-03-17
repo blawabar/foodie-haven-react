@@ -10,7 +10,7 @@
   text-transform: uppercase;
   font-weight: 300;
 
-  $list: ('--is-small', (18px, 20px)), ('--is-normal', (32px, 34px)), ('--is-large', (38px, 40px));
+  $list: ('--is-small', (26px, 28px)), ('--is-normal', (32px, 34px)), ('--is-large', (38px, 40px));
 
   @each $item in $list {
     $modifier: nth($item, 1);
