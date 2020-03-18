@@ -1,2 +1,44 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
 .error-info {
+  @include use-wrapper();
+  @include center-with-flex();
+
+  height: 100vh;
+  text-align: center;
+
+  &__code,
+  &__message {
+    font-weight: 400;
+  }
+
+  &__code {
+    font-size: 120px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--gray-dark);
+  }
+
+  &__message {
+    margin: $vertical-spacing 0 $vertical-spacing;
+    font-size: 25px;
+    color: var(--gray);
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__link-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    width: 14em;
+    background-color: var(--orange-dark);
+    color: var(--white);
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
 }
