@@ -37,10 +37,13 @@ const useFetch = url => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     const getData = async () => {
       try {
         dispatch({ type: FetchState.INIT });
-        const response = await fetch(url);
+        const response = await fetch(url, { signal });
 
         if (response.ok) {
           const successData = await response.json();
@@ -56,6 +59,8 @@ const useFetch = url => {
     };
 
     getData();
+
+    return () => controller.abort();
   }, []);
 
   return state;
