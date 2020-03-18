@@ -44,19 +44,19 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li className="navigation__link-item">
-          <NavLink to="/menu/">Menu</NavLink>
+          <NavLink to="/menu">Menu</NavLink>
         </li>
         <li className="navigation__link-item">
-          <NavLink to="/events/">Events</NavLink>
+          <NavLink to="/events">Events</NavLink>
         </li>
         <li className="navigation__link-item">
-          <NavLink to="/chef/">Chef</NavLink>
+          <NavLink to="/chef">Chef</NavLink>
         </li>
         <li className="navigation__link-item">
-          <NavLink to="/gallery/">Gallery</NavLink>
+          <NavLink to="/gallery">Gallery</NavLink>
         </li>
         <li className="navigation__link-item">
-          <NavLink to="/contact/">Contact</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
       <button
