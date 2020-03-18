@@ -10,51 +10,13 @@ const Gallery = () => {
     <section className="gallery">
       <PageHeading large>Food and Restaurant Gallery</PageHeading>
       <section className="gallery__masonry-grid">
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
-        <div className="image-frame">
-          <img src={asparagus} alt="asparagus_640.jpg" />
-        </div>
+        {Array.from({ length: 16 }, item => asparagus).map((imgSrc, indx) => {
+          return (
+            <div className="image-frame" key={indx}>
+              <img src={imgSrc} alt="mock-data" />
+            </div>
+          );
+        })}
       </section>
     </section>
   );

@@ -18,23 +18,9 @@
   }
 
   &__image-container {
+    @include use-image-holder($mq-bp-sm);
     @include use-mq-manager($mq-bp-sm) {
       flex-basis: 40%;
-      position: relative;
-      overflow: hidden;
-    }
-  }
-
-  &__image {
-    display: block;
-    width: 100%;
-
-    @include use-mq-manager($mq-bp-sm) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: auto;
-      transform: translate(-50%, -50%);
     }
   }
 
