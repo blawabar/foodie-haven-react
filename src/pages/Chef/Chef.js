@@ -3,6 +3,7 @@ import React from "react";
 import Carousel from "../../components/Carousel";
 import PageHeading from "../../components/PageHeading";
 import PageParagraph from "../../components/PageParagraph";
+import PageInfo from "../../components/PageInfo";
 
 import useFetch from "../../hooks/useFetch";
 
@@ -16,7 +17,7 @@ const Chef = () => {
   let content = null;
 
   if (isLoading) {
-    content = <h1>Loading content...</h1>;
+    content = <PageInfo>Loading content...</PageInfo>;
   } else if (data) {
     content = (
       <section className="chef">
@@ -44,7 +45,9 @@ const Chef = () => {
       </section>
     );
   } else if (error) {
-    content = <h1>An error has occured</h1>;
+    content = (
+      <PageInfo error>An error has occured - Please try again</PageInfo>
+    );
   }
 
   return content;

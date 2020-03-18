@@ -3,7 +3,9 @@ import React from "react";
 import "./Events.scss";
 
 import PageHeading from "../../components/PageHeading";
+import PageInfo from "../../components/PageInfo";
 import EventItem from "../../components/EventItem";
+
 import useFetch from "../../hooks/useFetch";
 
 const API = "/data/events.json";
@@ -25,11 +27,13 @@ const Events = () => {
   };
 
   if (isLoading) {
-    content = <h1>Loading content...</h1>;
+    content = <PageInfo>Loading content...</PageInfo>;
   } else if (data) {
     content = renderEventsContent(data);
   } else if (error) {
-    content = <h1>Loading error</h1>;
+    content = (
+      <PageInfo error>An error has occured - Please try again</PageInfo>
+    );
   }
 
   return content;

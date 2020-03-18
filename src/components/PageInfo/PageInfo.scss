@@ -1,0 +1,25 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.page-info {
+  $message-font-size: 35px;
+  @include center-with-flex();
+  @include use-wrapper();
+
+  height: 100vh;
+
+  &__message {
+    font-size: $message-font-size;
+    font-weight: 400;
+    text-align: center;
+    color: var(--gray-dark);
+
+    @include use-mq-manager($mq-bp-lg) {
+      font-size: $message-font-size * 1.5;
+    }
+
+    &--is-error {
+      color: var(--red);
+    }
+  }
+}

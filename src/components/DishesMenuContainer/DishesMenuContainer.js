@@ -4,6 +4,7 @@ import "./DishesMenuContainer.scss";
 
 import useFetch from "../../hooks/useFetch";
 import DishMenu from "../DishMenu";
+import PageInfo from "../../components/PageInfo";
 
 const API = "/data/dishes.json";
 
@@ -13,7 +14,7 @@ const DishesMenuContainer = () => {
   let content = null;
 
   if (isLoading) {
-    content = <h1>Loading content</h1>;
+    content = <PageInfo>Loading content...</PageInfo>;
   } else if (data) {
     const { categories } = data;
 
@@ -25,7 +26,9 @@ const DishesMenuContainer = () => {
       </section>
     );
   } else if (error) {
-    content = <h1>An error has occured</h1>;
+    content = (
+      <PageInfo error>An error has occured - Please try again</PageInfo>
+    );
   }
 
   return content;
