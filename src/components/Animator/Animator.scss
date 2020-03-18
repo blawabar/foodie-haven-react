@@ -2,7 +2,7 @@
   overflow: hidden;
 
   & > * {
-    animation: show-content 1000ms both;
+    animation: show-content 750ms both;
     animation-play-state: paused;
 
     @keyframes show-content {

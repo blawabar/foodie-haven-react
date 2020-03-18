@@ -11,7 +11,7 @@ const Animator = ({ children }) => {
       const animatorRefValue = selfRef.current;
 
       if (animatorRefValue) {
-        const animationThreshold = window.scrollY + window.innerHeight * 0.6;
+        const animationThreshold = window.scrollY + window.innerHeight * 0.75;
         const { offsetTop } = animatorRefValue;
 
         if (animationThreshold >= offsetTop) {
