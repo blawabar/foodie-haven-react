@@ -2,9 +2,25 @@ import React, { useEffect, useRef } from "react";
 
 import "./Animator.scss";
 
-const Animator = ({ children }) => {
+const FADE_OUT = "FADE_OUT";
+const PULL_UP = "PULL_UP";
+
+const baseClassName = "animator";
+const isPlayingSuffix = "--is-playing";
+const isPullingUpSuffix = "--is-pulling-up";
+const isFadingOutSuffix = "--is-fading-out";
+
+const animatedClassName = `${baseClassName}${isPlayingSuffix}`;
+const fadeOutClassName = `${baseClassName}${isFadingOutSuffix}`;
+const pullUpClassName = `${baseClassName}${isPullingUpSuffix}`;
+
+const typeToAnimationMap = {
+  FADE_OUT: `${baseClassName} ${fadeOutClassName}`,
+  PULL_UP: `${baseClassName} ${pullUpClassName}`
+};
+
+const Animator = ({ children, animationType = FADE_OUT }) => {
   const selfRef = useRef(null);
-  const animatedClassName = useRef("animator--is-showing");
 
   useEffect(() => {
     const handleOnScroll = () => {
@@ -15,7 +31,7 @@ const Animator = ({ children }) => {
         const { offsetTop } = animatorRefValue;
 
         if (animationThreshold >= offsetTop) {
-          animatorRefValue.classList.add(animatedClassName.current);
+          animatorRefValue.classList.add(animatedClassName);
         }
       }
     };
@@ -26,10 +42,15 @@ const Animator = ({ children }) => {
   }, [children]);
 
   return (
-    <div className="animator" ref={selfRef}>
+    <div className={typeToAnimationMap[animationType]} ref={selfRef}>
       {children}
     </div>
   );
+};
+
+export const TYPE = {
+  PULL_UP,
+  FADE_OUT
 };
 
 export default Animator;

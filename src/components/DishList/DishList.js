@@ -2,7 +2,7 @@ import React from "react";
 
 import "./DishList.scss";
 
-import Animator from "../Animator";
+import Animator, { TYPE } from "../Animator";
 import DishItem from "../DishItem";
 
 const DishList = ({ dishes }) => {
@@ -10,7 +10,7 @@ const DishList = ({ dishes }) => {
     <section className="dish-list">
       {dishes.map((dish, index) => {
         return (
-          <Animator key={index}>
+          <Animator key={index} animationType={TYPE.PULL_UP}>
             <DishItem {...dish} />
           </Animator>
         );

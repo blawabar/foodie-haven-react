@@ -6,6 +6,8 @@ import PageHeading from "../../components/PageHeading";
 import PageInfo from "../../components/PageInfo";
 import EventItem from "../../components/EventItem";
 
+import Animator from "../../components/Animator";
+
 import useFetch from "../../hooks/useFetch";
 
 const API = "/data/events.json";
@@ -17,10 +19,16 @@ const Events = () => {
   const renderEventsContent = ({ events }) => {
     return (
       <section className="events">
-        <PageHeading large>stay up to date with us</PageHeading>
+        <Animator>
+          <PageHeading large>stay up to date with us</PageHeading>
+        </Animator>
         {events.map(event => {
           const { id } = event;
-          return <EventItem key={id} {...event} />;
+          return (
+            <Animator key={id}>
+              <EventItem {...event} />
+            </Animator>
+          );
         })}
       </section>
     );

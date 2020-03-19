@@ -2,10 +2,11 @@
   overflow: hidden;
 
   & > * {
-    animation: show-content 750ms both;
+    animation-duration: 750ms;
+    animation-fill-mode: both;
     animation-play-state: paused;
 
-    @keyframes show-content {
+    @keyframes pull-up {
       0% {
         transform: translateY(100%);
         opacity: 0;
@@ -20,11 +21,31 @@
         opacity: 1;
       }
     }
+
+    @keyframes fade-out {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
   }
 
-  &--is-showing {
-    & > * {
-      animation-play-state: running;
-    }
+  &--is-pulling-up > * {
+    animation-name: pull-up;
+  }
+
+  &--is-fading-out > * {
+    animation-name: fade-out;
+  }
+
+  &--is-playing > * {
+    animation-play-state: running;
   }
 }
