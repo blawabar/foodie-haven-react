@@ -5,44 +5,4 @@
   @include use-wrapper();
 
   padding: $vertical-padding-sm 0;
-
-  // It will be moved into a separate component
-  &__masonry-grid {
-    display: grid;
-    grid-auto-rows: 87.5vh;
-
-    @include use-mq-manager($mq-bp-lg) {
-      grid-auto-rows: 250px;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-flow: dense;
-      padding-top: $vertical-padding-sm;
-    }
-
-    .image-frame {
-      @include use-image-holder($scaling-stretch, $mq-bp-ss);
-      margin: 5px;
-      cursor: pointer;
-
-      @include use-mq-manager($mq-bp-lg) {
-        &:nth-child(5n + 2) {
-          grid-row: span 2;
-        }
-
-        &:nth-child(4n) {
-          grid-row: span 2;
-          grid-column: span 2;
-        }
-      }
-
-      img {
-        transition: transform 250ms ease-out;
-      }
-
-      &:hover {
-        img {
-          transform: translate(-50%, -50%) scale(1.25);
-        }
-      }
-    }
-  }
 }
