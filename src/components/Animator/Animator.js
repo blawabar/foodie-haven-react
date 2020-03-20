@@ -38,6 +38,8 @@ const Animator = ({ children, animationType = FADE_OUT }) => {
 
     document.addEventListener("scroll", handleOnScroll);
 
+    handleOnScroll();
+
     return () => document.removeEventListener("scroll", handleOnScroll);
   }, [children]);
 
