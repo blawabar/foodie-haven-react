@@ -12,7 +12,7 @@ const Header = () => {
         <p className="main-header__catchline">
           Delicious recipes and wide option of choice
         </p>
-        <Link to="/menu/">check our menu</Link>
+        <Link to="/menu">check our menu</Link>
       </div>
     </header>
   );
