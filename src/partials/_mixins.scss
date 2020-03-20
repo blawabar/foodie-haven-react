@@ -84,7 +84,7 @@
 // Here we have to possibilities to scale the image:
 // - by setting only the 'width' property to 'auto' value,
 // - be setting together 'width' and 'height' to 'auto' and 100% respectively,
-@mixin use-image-holder($scaling-type: auto, $breakpoints...) {
+@mixin use-image-holder($scaling-type, $breakpoints...) {
   @include use-mq-manager($breakpoints...) {
     overflow: hidden;
     position: relative;
@@ -103,8 +103,8 @@
       @if $scaling-type == auto {
         width: auto;
       } @else if $scaling-type == stretch {
-        width: auto;
         height: 100%;
+        width: auto;
       }
     }
   }

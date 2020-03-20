@@ -18,10 +18,10 @@
   }
 
   &__image-container {
-    @include use-image-holder($mq-bp-sm);
     @include use-mq-manager($mq-bp-sm) {
       flex-basis: 40%;
     }
+    @include use-image-holder($scaling-auto, $mq-bp-sm);
   }
 
   &__info {
