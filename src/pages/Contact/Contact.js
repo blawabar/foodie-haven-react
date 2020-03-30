@@ -3,6 +3,8 @@ import React from "react";
 import "./Contact.scss";
 
 import PageHeading from "../../components/PageHeading";
+import ContactInfo from "../../components/ContactInfo";
+import ContactForm from "../../components/ContactForm";
 
 const contactDetailsData = [
   {
@@ -19,41 +21,20 @@ const contactDetailsData = [
   }
 ];
 
-// It will be moved into a separate component later on
-const ContactInfo = ({ title, content }) => {
-  return (
-    <div className="contact-info">
-      <PageHeading small>{title}</PageHeading>
-      {content.map((text, index) => {
-        return (
-          <p className="contact-info__content" key={index}>
-            {text}
-          </p>
-        );
-      })}
-    </div>
-  );
-};
-
-// export default ContactInfo;
+const renderContactDetails = data =>
+  data.map((detail, index) => {
+    return <ContactInfo {...detail} key={index} />;
+  });
 
 const Contact = () => {
   return (
     <section className="contact">
       <PageHeading large>get in touch with us</PageHeading>
       <section className="contact__details">
-        {/* Add ContactInfo components */}
-        {contactDetailsData.map((detail, index) => {
-          return <ContactInfo {...detail} key={index} />;
-        })}
+        {renderContactDetails(contactDetailsData)}
       </section>
       <PageHeading small>send us a message</PageHeading>
-      <form className="contact__form">
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit">send message</button>
-      </form>
+      <ContactForm />
     </section>
   );
 };

@@ -1,0 +1,68 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.contact-form {
+  $form-vertical-margin: $vertical-spacing * 2;
+  margin: $form-vertical-margin 0 $form-vertical-margin;
+
+  @include use-mq-manager($mq-bp-md, $mq-bp-lg) {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  input,
+  textarea,
+  button {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-family: var(--font-family-sans-serif);
+  }
+
+  input,
+  textarea {
+    padding: 5px 10px;
+    margin-top: $vertical-spacing / 2;
+    outline-color: var(--orange-dark);
+
+    &.--has-error {
+      border: 1px solid var(--red);
+      color: var(--red);
+    }
+  }
+
+  textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 256px;
+    max-height: 256px;
+  }
+
+  button {
+    margin: $vertical-spacing * 1.5 auto;
+    width: 150px;
+    background-color: transparent;
+    border: 2px solid var(--gray);
+    text-transform: uppercase;
+    line-height: 3;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 300ms ease-out;
+
+    &:hover {
+      background-color: var(--orange-dark);
+      border-color: var(--orange-dark);
+      color: var(--white);
+    }
+  }
+
+  .err-msg {
+    margin-top: 0.5em;
+    font-size: 14px;
+    color: var(--green);
+
+    &--has-error {
+      color: var(--red);
+    }
+  }
+}

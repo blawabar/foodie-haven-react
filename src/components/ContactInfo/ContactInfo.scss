@@ -1,0 +1,16 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.contact-info {
+  margin-bottom: $vertical-spacing * 2.5;
+
+  @include use-mq-manager($mq-bp-lg) {
+    flex-basis: 30%;
+  }
+
+  &__content {
+    margin: 1em 0;
+    color: var(--gray);
+    text-align: center;
+  }
+}
