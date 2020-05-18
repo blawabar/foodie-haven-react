@@ -23,9 +23,7 @@ const Chef = () => {
   } else if (data) {
     content = (
       <section className="chef">
-        <Animator animationType={TYPE.PULL_UP}>
-          <PageHeading large>meet our chef</PageHeading>
-        </Animator>
+        <PageHeading large>meet our chef</PageHeading>
         <Animator animationType={TYPE.PULL_UP}>
           <section className="chef__daily-routines">
             <PageHeading normal>just daily routines</PageHeading>

@@ -19,10 +19,8 @@ const Events = () => {
   const renderEventsContent = ({ events }) => {
     return (
       <section className="events">
-        <Animator>
-          <PageHeading large>stay up to date with us</PageHeading>
-        </Animator>
-        {events.map(event => {
+        <PageHeading large>stay up to date with us</PageHeading>
+        {events.map((event) => {
           const { id } = event;
           return (
             <Animator key={id}>

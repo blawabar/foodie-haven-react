@@ -2,7 +2,7 @@
 @import '../../partials/mixins';
 
 .main-header {
-  height: 100vh;
+  height: 80vh;
   background-image: url(../../images/salmon_1280.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -15,6 +15,7 @@
     @include center-with-flex();
     flex-direction: column;
     height: 100%;
+    padding: 0 $horizontal-spacing / 2;
     background-color: rgba(0, 0, 0, 0.45);
 
     a {

@@ -3,7 +3,7 @@
 
 .chef {
   @include use-wrapper();
-  padding: $vertical-padding-sm 0;
+  padding: $vertical-padding-xs 0 $vertical-padding-sm;
 
   &__daily-routines,
   &__detailed-info {

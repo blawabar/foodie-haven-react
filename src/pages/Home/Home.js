@@ -8,19 +8,17 @@ import GalleryGrid from "../../components/GalleryGrid";
 
 import Animator from "../../components/Animator";
 
-const GALLERY_IMAGES = [
+const GALLERY_GRID_IMAGES = [
   "asparagus_640.jpg",
   "kitchen_640.jpg",
   "breakfast_640.jpg",
-  "table_640.jpg"
+  "table_640.jpg",
 ];
 
 const Home = () => {
   return (
     <section className="home">
-      <Animator>
-        <PageHeading large>our restaurant</PageHeading>
-      </Animator>
+      <PageHeading large>our restaurant</PageHeading>
       <Animator>
         <PageParagraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
@@ -39,7 +37,7 @@ const Home = () => {
           reiciendis distinctio.
         </PageParagraph>
       </Animator>
-      <GalleryGrid images={GALLERY_IMAGES} />
+      <GalleryGrid images={GALLERY_GRID_IMAGES} />
     </section>
   );
 };

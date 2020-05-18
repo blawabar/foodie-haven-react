@@ -10,7 +10,7 @@ class FetchState {
 const INITIAL_STATE = {
   isLoading: false,
   data: null,
-  error: null
+  error: null,
 };
 
 const reducer = (state, action) => {
@@ -33,7 +33,7 @@ const reducer = (state, action) => {
   return state;
 };
 
-const useFetch = url => {
+const useFetch = (url) => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   useEffect(() => {

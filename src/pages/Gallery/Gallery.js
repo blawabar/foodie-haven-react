@@ -23,15 +23,13 @@ const images = [
   "table_640.jpg",
   "jause_640.jpg",
   "birthday_640.jpg",
-  "catering_640.jpg"
+  "catering_640.jpg",
 ];
 
 const Gallery = () => {
   return (
     <section className="gallery">
-      <Animator>
-        <PageHeading large>Food and Restaurant Gallery</PageHeading>
-      </Animator>
+      <PageHeading large>Food and Restaurant Gallery</PageHeading>
       <Animator>
         <MasonryGrid images={images}></MasonryGrid>
       </Animator>

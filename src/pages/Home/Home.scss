@@ -4,5 +4,5 @@
 .home {
   @include use-wrapper();
 
-  padding: $vertical-padding-sm 0 $vertical-padding-sm;
+  padding: $vertical-padding-xs 0 $vertical-padding-large;
 }

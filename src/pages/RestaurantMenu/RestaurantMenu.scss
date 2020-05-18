@@ -2,7 +2,7 @@
 @import '../../partials/mixins';
 
 .restaurant-menu {
-  padding: $vertical-padding-sm 0 $vertical-padding-sm;
+  padding: $vertical-padding-xs 0 $vertical-padding-sm;
   background-color: var(--smoke);
 
   &__wrapper {
