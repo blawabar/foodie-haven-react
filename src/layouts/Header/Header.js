@@ -1,21 +1,40 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
+import { Link, Switch, Route } from "react-router-dom";
 
 import "./Header.scss";
 
-const Header = () => {
+import { PATH_MAP } from "../../constants";
+
+const Header = (props) => {
+  const extractHeaderProps = (props) => {
+    const pathName = props.location.pathname.replace("/", "");
+    const isAtHome = pathName.length === 0;
+
+    const catchPhrase = isAtHome
+      ? PATH_MAP.home.phrase
+      : PATH_MAP[pathName].phrase;
+
+    return {
+      catchPhrase,
+      pathName: isAtHome ? "home" : pathName,
+    };
+  };
+
+  const { catchPhrase, pathName } = extractHeaderProps(props);
+
   return (
-    <header className="main-header">
+    <header className={`main-header main-header--is-showing-${pathName}`}>
       <div className="main-header__glass-pane">
         <h1 className="main-header__intro-heading">foodie haven</h1>
-        <p className="main-header__catchline">
-          Delicious recipes and wide option of choice
-        </p>
+        <p className="main-header__catchline">{catchPhrase}</p>
         <Link to="/menu">check our menu</Link>
       </div>
     </header>
   );
 };
 
-export default Header;
+export default () => (
+  <Switch>
+    <Route component={Header} />
+  </Switch>
+);

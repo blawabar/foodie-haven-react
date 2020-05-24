@@ -3,7 +3,6 @@
 
 .main-header {
   height: 80vh;
-  background-image: url(../../images/salmon_1280.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -11,12 +10,21 @@
   text-align: center;
   color: white;
 
+  $backgrounds: (home, 'restaurant'), (menu, 'salmon'), (events, 'jause'), (chef, 'chef'), (gallery, 'catering'),
+    (contact, 'telephone');
+
+  @each $id, $image in $backgrounds {
+    &--is-showing-#{$id} {
+      background-image: url(../../images/#{$image}_1280.jpg);
+    }
+  }
+
   &__glass-pane {
     @include center-with-flex();
     flex-direction: column;
     height: 100%;
     padding: 0 $horizontal-spacing / 2;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.6);
 
     a {
       display: block;
