@@ -1,0 +1,18 @@
+{
+  "slides": [{
+      "img": "service_640.jpg",
+      "title": "Preparing for the work",
+      "description": "Eius error consequatur ex! Nemo fugiat nisi dolores neque dolorem inventore quo ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, iusto?"
+    },
+    {
+      "img": "cook_640.jpg",
+      "title": "Fighting with vegetables",
+      "description": "Eius error consequatur ex! Nemo fugiat nisi dolores neque dolorem inventore quo ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, iusto?"
+    },
+    {
+      "img": "serving_640.jpg",
+      "title": "The final stage",
+      "description": "Eius error consequatur ex! Nemo fugiat nisi dolores neque dolorem inventore quo ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, iusto?"
+    }
+  ]
+}

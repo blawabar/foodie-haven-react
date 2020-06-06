@@ -1,0 +1,79 @@
+{
+  "categories": [{
+    "type": "breakfast and starters",
+    "dishes": [{
+      "name": "Tortellini Skewers",
+      "price": 9,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Fried Ravioli",
+      "price": 7,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Wild Mushroom Arancini",
+      "price": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Mozzarella Sticks",
+      "price": 10,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }]
+  }, {
+    "type": "main course",
+    "dishes": [{
+      "name": "Roast Stuffed Chicken",
+      "price": 9,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Chicken & Mushroom Pasta",
+      "price": 7,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Beef Lasagne",
+      "price": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Chicken Goujons",
+      "price": 10,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }]
+  }, {
+    "type": "dinner",
+    "dishes": [{
+      "name": "Sesame-Ginger Beef",
+      "price": 9,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Crispy Fried Chicken",
+      "price": 7,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Mongolian Shrimp & Broccoli",
+      "price": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Spicy Coconut Salmon",
+      "price": 10,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }]
+  }, {
+    "type": "desserts",
+    "dishes": [{
+      "name": "Chocolate Mud Cake",
+      "price": 9,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Bourbon-Pecan Tart",
+      "price": 7,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Texas Sheet Cake",
+      "price": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }, {
+      "name": "Vanilla Cheesecake",
+      "price": 10,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."
+    }]
+  }]
+}

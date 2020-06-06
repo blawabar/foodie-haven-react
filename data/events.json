@@ -1,0 +1,27 @@
+{
+  "events": [{
+    "id": 1,
+    "img": "jause",
+    "title": "A day with a regional cuisine",
+    "date": "June 21, 2019",
+    "excerpt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat fugiat magni enim expedita voluptate, harum cupiditate quisquam consequatur, ipsum pariatur earum voluptas aspernatur quos quas vitae ducimus voluptatibus atque incidunt, aliquid laborum corporis nobis odio?"
+  }, {
+    "id": 2,
+    "img": "birthday",
+    "title": "How do we organize birthday parties",
+    "date": "August 08, 2019",
+    "excerpt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat fugiat magni enim expedita voluptate, harum cupiditate quisquam consequatur, ipsum pariatur earum voluptas aspernatur quos quas vitae ducimus voluptatibus atque incidunt, aliquid laborum corporis nobis odio?"
+  }, {
+    "id": 3,
+    "img": "catering",
+    "title": "Secret of making perfect olives",
+    "date": "Januray 23, 2020",
+    "excerpt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat fugiat magni enim expedita voluptate, harum cupiditate quisquam consequatur, ipsum pariatur earum voluptas aspernatur quos quas vitae ducimus voluptatibus atque incidunt, aliquid laborum corporis nobis odio?"
+  }, {
+    "id": 4,
+    "img": "restaurant",
+    "title": "Our restaurant - celebrating 3rd anniversary of its founding",
+    "date": "March 08, 2020",
+    "excerpt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat fugiat magni enim expedita voluptate, harum cupiditate quisquam consequatur, ipsum pariatur earum voluptas aspernatur quos quas vitae ducimus voluptatibus atque incidunt, aliquid laborum corporis nobis odio?"
+  }]
+}
