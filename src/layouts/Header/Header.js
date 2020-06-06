@@ -5,9 +5,9 @@ import "./Header.scss";
 
 import { PATH_MAP } from "../../constants";
 
-const Header = (props) => {
-  const extractHeaderProps = (props) => {
-    const pathName = props.location.pathname.replace("/", "");
+const Header = ({ location }) => {
+  const extractHeaderProps = () => {
+    const pathName = location.pathname.replace("/", "");
     const isAtHome = pathName.length === 0;
 
     const catchPhrase = isAtHome
@@ -20,7 +20,7 @@ const Header = (props) => {
     };
   };
 
-  const { catchPhrase, pathName } = extractHeaderProps(props);
+  const { catchPhrase, pathName } = extractHeaderProps();
 
   return (
     <header className={`main-header main-header--is-showing-${pathName}`}>

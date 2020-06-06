@@ -1,4 +1,6 @@
-# Template Page of A Restaurant
+# An Example of A Restaurant SPA Template
+
+This is an example of a SPA template, designed to be used in a restaurant or in any type of a service related to provide meals.
 
 ## Create React App
 
