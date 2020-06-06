@@ -1,14 +1,14 @@
-import React from "react";
+import React, { lazy } from "react";
 
 import { Switch, Route } from "react-router-dom";
 
-import Home from "../../pages/Home";
-import RestaurantMenu from "../../pages/RestaurantMenu";
-import Events from "../../pages/Events";
-import Chef from "../../pages/Chef";
-import Gallery from "../../pages/Gallery";
-import Contact from "../../pages/Contact";
-import ErrorInfo from "../../pages/ErrorInfo";
+const Home = lazy(() => import("../../pages/Home"));
+const RestaurantMenu = lazy(() => import("../../pages/RestaurantMenu"));
+const Events = lazy(() => import("../../pages/Events"));
+const Chef = lazy(() => import("../../pages/Chef"));
+const Gallery = lazy(() => import("../../pages/Gallery"));
+const Contact = lazy(() => import("../../pages/Contact"));
+const ErrorInfo = lazy(() => import("../../pages/ErrorInfo"));
 
 const PageHolder = () => {
   return (

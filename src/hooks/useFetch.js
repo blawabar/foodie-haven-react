@@ -60,7 +60,9 @@ const useFetch = (url) => {
 
     getData();
 
-    return () => controller.abort();
+    return () => {
+      controller.abort();
+    };
   }, []);
 
   return state;

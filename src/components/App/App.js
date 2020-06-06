@@ -5,12 +5,16 @@ import Navigation from "../../layouts/Navigation";
 import PageHolder from "../../layouts/PageHolder";
 import Footer from "../../layouts/Footer";
 
+import PageInfo from "../PageInfo";
+
 function App() {
   return (
     <>
       <Header />
       <Navigation />
-      <PageHolder />
+      <React.Suspense fallback={<PageInfo>Loading content...</PageInfo>}>
+        <PageHolder />
+      </React.Suspense>
       <Footer />
     </>
   );
