@@ -10,10 +10,10 @@ import Animator from "../../components/Animator";
 
 import useFetch from "../../hooks/useFetch";
 
-const API = "/data/events.json";
+import { API } from "../../constants";
 
 const Events = () => {
-  const { isLoading, data, error } = useFetch(API);
+  const { isLoading, data, error } = useFetch(API.EVENTS);
   let content = null;
 
   const renderEventsContent = ({ events }) => {

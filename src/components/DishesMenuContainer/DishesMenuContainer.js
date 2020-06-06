@@ -6,10 +6,10 @@ import useFetch from "../../hooks/useFetch";
 import DishMenu from "../DishMenu";
 import PageInfo from "../../components/PageInfo";
 
-const API = "/data/dishes.json";
+import { API } from "../../constants";
 
 const DishesMenuContainer = () => {
-  const { isLoading, data, error } = useFetch(API);
+  const { isLoading, data, error } = useFetch(API.DISHES);
 
   let content = null;
 

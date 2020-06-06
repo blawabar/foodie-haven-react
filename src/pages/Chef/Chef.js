@@ -11,10 +11,10 @@ import useFetch from "../../hooks/useFetch";
 
 import "./Chef.scss";
 
-const API = "/data/chef.json";
+import { API } from "../../constants";
 
 const Chef = () => {
-  const { data, isLoading, error } = useFetch(API);
+  const { data, isLoading, error } = useFetch(API.CHEF);
 
   let content = null;
 
