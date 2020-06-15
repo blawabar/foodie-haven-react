@@ -1,0 +1,37 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.filter-list {
+  @include use-mq-manager($mq-bp-xs) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  list-style: none;
+  text-align: center;
+
+  &__item {
+    @include use-mq-manager($mq-bp-xs) {
+      flex-grow: 1;
+
+      &:nth-last-of-type(1),
+      &:nth-last-of-type(2) {
+        flex-grow: 0;
+      }
+    }
+  }
+
+  &__btn {
+    @include normalize-button();
+
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-family: var(--font-family-sans-serif);
+
+    &--is-selected {
+      background-color: var(--yellow);
+    }
+  }
+}

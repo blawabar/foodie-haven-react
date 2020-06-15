@@ -14,10 +14,10 @@ const animatedClassName = `${baseClassName}${isPlayingSuffix}`;
 const fadeOutClassName = `${baseClassName}${isFadingOutSuffix}`;
 const pullUpClassName = `${baseClassName}${isPullingUpSuffix}`;
 
-const typeToAnimationMap = {
+const typeToAnimationMap = Object.freeze({
   FADE_OUT: `${baseClassName} ${fadeOutClassName}`,
-  PULL_UP: `${baseClassName} ${pullUpClassName}`
-};
+  PULL_UP: `${baseClassName} ${pullUpClassName}`,
+});
 
 const Animator = ({ children, animationType = FADE_OUT }) => {
   const selfRef = useRef(null);
@@ -50,9 +50,9 @@ const Animator = ({ children, animationType = FADE_OUT }) => {
   );
 };
 
-export const TYPE = {
+export const TYPE = Object.freeze({
   PULL_UP,
-  FADE_OUT
-};
+  FADE_OUT,
+});
 
 export default Animator;

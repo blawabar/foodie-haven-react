@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./DishesMenuContainer.scss";
 
@@ -6,9 +6,12 @@ import useFetch from "../../hooks/useFetch";
 import DishMenu from "../DishMenu";
 import PageInfo from "../../components/PageInfo";
 
-import { API } from "../../constants";
+import { API, DISHES_FILTER_VALUES } from "../../constants";
+
+import { FilterContext as DishesFilterContext } from "../../components/FilterList";
 
 const DishesMenuContainer = () => {
+  const { filterValue } = useContext(DishesFilterContext);
   const { isLoading, data, error } = useFetch(API.DISHES);
 
   let content = null;
@@ -16,7 +19,12 @@ const DishesMenuContainer = () => {
   if (isLoading) {
     content = <PageInfo>Loading content...</PageInfo>;
   } else if (data) {
-    const { categories } = data;
+    let { categories } = data;
+
+    categories =
+      filterValue === DISHES_FILTER_VALUES.ALL
+        ? categories
+        : categories.filter(({ type }) => type === filterValue);
 
     content = (
       <section className="dishes-menu-container">

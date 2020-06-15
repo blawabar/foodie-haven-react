@@ -27,21 +27,13 @@
     background-color: rgba(0, 0, 0, 0.6);
 
     a {
+      @include normalize-button();
+
       display: block;
-      padding-left: $horizontal-spacing;
-      padding-right: $horizontal-spacing;
       margin-top: $vertical-spacing * 0.7;
-      background-color: var(--orange-dark);
-      font-size: 15px;
-      line-height: 3;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: white;
 
       @include use-mq-manager($mq-bp-lg) {
         margin-top: $vertical-spacing * 1.5;
-        font-size: 20px;
       }
     }
   }
