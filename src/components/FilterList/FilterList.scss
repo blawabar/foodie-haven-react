@@ -11,12 +11,13 @@
   text-align: center;
 
   &__item {
-    @include use-mq-manager($mq-bp-xs) {
-      flex-grow: 1;
+    flex-grow: 1;
 
-      &:nth-last-of-type(1),
-      &:nth-last-of-type(2) {
-        flex-grow: 0;
+    @include use-mq-manager($mq-bp-xs) {
+      &:nth-of-type(1),
+      &:nth-of-type(4),
+      &:nth-of-type(5) {
+        flex-grow: 2;
       }
     }
   }

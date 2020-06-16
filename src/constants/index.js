@@ -22,6 +22,16 @@ export const PATH_MAP = Object.freeze({
   },
 });
 
+export const PATHS = Object.freeze({
+  HOME: "/",
+  MENU: "/menu",
+  EVENTS: "/events",
+  EVENT_DETAILS: "/event-details/:id",
+  CHEF: "/chef",
+  GALLERY: "/gallery",
+  CONTACT: "/contact",
+});
+
 const BASE_URL = process.env.PUBLIC_URL;
 
 export const API = Object.freeze({

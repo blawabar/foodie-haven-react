@@ -1,0 +1,35 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.event-details {
+  @include use-wrapper();
+  padding: $vertical-padding-xs 0 $vertical-padding-sm;
+
+  &__editor-info {
+    margin-bottom: $vertical-spacing;
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: 700;
+
+    &::before {
+      content: 'Published by Admin on (';
+    }
+
+    &::after {
+      content: ')';
+    }
+
+    @include use-mq-manager($mq-bp-xl) {
+      font-size: 16px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__back-btn {
+    @include normalize-button();
+  }
+}

@@ -2,9 +2,12 @@ import React, { lazy } from "react";
 
 import { Switch, Route } from "react-router-dom";
 
+import { PATHS } from "../../constants";
+
 const Home = lazy(() => import("../../pages/Home"));
 const RestaurantMenu = lazy(() => import("../../pages/RestaurantMenu"));
 const Events = lazy(() => import("../../pages/Events"));
+const EventDetails = lazy(() => import("../../pages/EventDetails"));
 const Chef = lazy(() => import("../../pages/Chef"));
 const Gallery = lazy(() => import("../../pages/Gallery"));
 const Contact = lazy(() => import("../../pages/Contact"));
@@ -14,13 +17,18 @@ const PageHolder = () => {
   return (
     <>
       <Switch>
-        <Route exact strict path="/" component={Home} />
-        <Route exact strict path="/menu" component={RestaurantMenu} />
-        <Route exact strict path="/events" component={Events} />
-        <Route exact strict path="/event-details/:id" component={Events} />
-        <Route exact strict path="/chef" component={Chef} />
-        <Route exact strict path="/gallery" component={Gallery} />
-        <Route exact strict path="/contact" component={Contact} />
+        <Route exact strict path={PATHS.HOME} component={Home} />
+        <Route exact strict path={PATHS.MENU} component={RestaurantMenu} />
+        <Route exact strict path={PATHS.EVENTS} component={Events} />
+        <Route
+          exact
+          strict
+          path={PATHS.EVENT_DETAILS}
+          component={EventDetails}
+        />
+        <Route exact strict path={PATHS.CHEF} component={Chef} />
+        <Route exact strict path={PATHS.GALLERY} component={Gallery} />
+        <Route exact strict path={PATHS.CONTACT} component={Contact} />
         <Route component={ErrorInfo} />
       </Switch>
     </>
