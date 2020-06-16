@@ -10,8 +10,8 @@
   text-align: center;
   color: white;
 
-  $backgrounds: (home, 'restaurant'), (menu, 'salmon'), (events, 'jause'), (chef, 'chef'), (gallery, 'catering'),
-    (contact, 'telephone');
+  $backgrounds: ('home', 'restaurant'), (menu, 'salmon'), ('events', 'jause'), ('event_details', 'jause'),
+    ('chef', 'chef'), ('gallery', 'catering'), ('contact', 'telephone');
 
   @each $id, $image in $backgrounds {
     &--is-showing-#{$id} {

@@ -7,12 +7,12 @@ import { PATH_MAP } from "../../constants";
 
 const Header = ({ location }) => {
   const extractHeaderProps = () => {
-    const pathName = location.pathname.replace("/", "");
+    const pathName = location.pathname.split("/")[1].replace("-", "_");
     const isAtHome = pathName.length === 0;
 
     const catchPhrase = isAtHome
       ? PATH_MAP.home.phrase
-      : PATH_MAP[pathName].phrase;
+      : PATH_MAP[pathName].phrase || "";
 
     return {
       catchPhrase,

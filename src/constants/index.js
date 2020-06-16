@@ -8,6 +8,9 @@ export const PATH_MAP = Object.freeze({
   events: {
     phrase: "Our events and news",
   },
+  event_details: {
+    phrase: "How to get in touch with us",
+  },
   chef: {
     phrase: "Meet our chef",
   },

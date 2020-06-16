@@ -17,6 +17,7 @@ const PageHolder = () => {
         <Route exact strict path="/" component={Home} />
         <Route exact strict path="/menu" component={RestaurantMenu} />
         <Route exact strict path="/events" component={Events} />
+        <Route exact strict path="/event-details/:id" component={Events} />
         <Route exact strict path="/chef" component={Chef} />
         <Route exact strict path="/gallery" component={Gallery} />
         <Route exact strict path="/contact" component={Contact} />
