@@ -2,8 +2,7 @@ import React from "react";
 
 import "./DishList.scss";
 
-import Animator, { TYPE } from "../Animator";
-import DishItem from "../DishItem";
+import { Animator, TYPE, DishItem } from "components";
 
 const DishList = ({ dishes }) => {
   return (

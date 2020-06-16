@@ -6,7 +6,6 @@
   padding: $vertical-padding-xs 0 $vertical-padding-sm;
 
   &__editor-info {
-    margin-bottom: $vertical-spacing;
     color: var(--gray);
     font-size: 12px;
     font-weight: 700;
@@ -26,6 +25,7 @@
 
   &__image {
     display: block;
+    margin-top: $vertical-spacing / 2;
     width: 100%;
   }
 

@@ -2,8 +2,7 @@ import React from "react";
 
 import "./CarouselSlide.scss";
 
-import PageHeading from "../PageHeading";
-import PageParagraph from "../PageParagraph";
+import { PageHeading, PageParagraph } from "components";
 
 const CarouselSlide = ({ type, img, title, description }) => {
   return (

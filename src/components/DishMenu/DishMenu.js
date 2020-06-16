@@ -2,9 +2,7 @@ import React from "react";
 
 import "./DishMenu.scss";
 
-import PageHeading from "../PageHeading";
-import Animator, { TYPE } from "../Animator";
-import DishList from "../DishList";
+import { PageHeading, Animator, TYPE, DishList } from "components";
 
 const DishMenu = ({ type, dishes }) => {
   return (

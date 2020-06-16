@@ -2,7 +2,7 @@ import React from "react";
 
 import "./DishItem.scss";
 
-import PageParagraph from "../PageParagraph";
+import { PageParagraph } from "components";
 
 const DishItem = ({ name, description, price }) => {
   return (

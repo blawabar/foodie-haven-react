@@ -2,7 +2,7 @@ import React from "react";
 
 import "./ContactInfo.scss";
 
-import PageHeading from "../PageHeading";
+import { PageHeading } from "components";
 
 const ContactInfo = ({ title, content }) => {
   return (

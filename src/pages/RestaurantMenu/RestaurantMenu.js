@@ -6,7 +6,7 @@ import { FilterList as DishesFilterList } from "../../components/FilterList";
 import PageHeading from "../../components/PageHeading/";
 import DishesMenuContainer from "../../components/DishesMenuContainer";
 
-import { DISHES_FILTER_VALUES } from "../../constants";
+import { DISHES_FILTER_VALUES } from "app-constants";
 
 const RestaurantMenu = () => {
   return (

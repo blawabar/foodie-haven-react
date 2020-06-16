@@ -3,10 +3,10 @@ import React from "react";
 
 import "./Carousel.scss";
 
-import CarouselContainer from "../CarouselContainer";
+import { CarouselContainer } from "components";
 
 const Carousel = ({ slides }) => {
-  const cloneSlidesData = slides => {
+  const cloneSlidesData = (slides) => {
     // 1. Clone the first
     const firstCloned = slides[0];
 

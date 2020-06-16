@@ -1,20 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import PageHeading from "../../components/PageHeading/PageHeading";
-import PageParagraph from "../../components/PageParagraph/PageParagraph";
-
 import "./EventDetails.scss";
 
-import Animator, { TYPE } from "../../components/Animator/Animator";
-import pageImage from "../../images/jause_1280.jpg";
-import { PATHS } from "../../constants";
+import { PageHeading, PageParagraph, Animator, TYPE } from "components";
+import pageImage from "images/jause_1280.jpg";
+import { PATHS } from "app-constants";
 
 const EventDetails = () => {
   return (
     <section className="event-details">
       <PageHeading large>A day with a regional cuisine</PageHeading>
-      <p className="event-details__editor-info">June 21, 2019</p>
+      <span className="event-details__editor-info">June 21, 2019</span>
       <Animator animationType={TYPE.FADE_OUT}>
         <img src={pageImage} alt="" className="event-details__image" />
       </Animator>

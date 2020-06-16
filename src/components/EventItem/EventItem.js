@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./EventItem.scss";
 
-import PageParagraph from "../../components/PageParagraph";
-import { Link } from "react-router-dom";
+import { PageParagraph } from "components";
 
 const EventItem = ({ img, title, date, excerpt, id }) => {
   return (

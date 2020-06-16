@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import "./CarouselContainer.scss";
 
-import CarouselSlide from "../CarouselSlide";
+import { CarouselSlide } from "components";
 
 const CarouselContainer = ({ slides }) => {
   const carouselSlideRef = useRef(null);
@@ -25,16 +25,16 @@ const CarouselContainer = ({ slides }) => {
     };
   }, [slideIndex]);
 
-  const generateStyle = slideIndex => {
+  const generateStyle = (slideIndex) => {
     let style = {
       transform: `translateX(-${slideIndex * 100}%)`,
-      transition: slideIndex === 0 ? "none" : "transform ease-in-out 0.4s"
+      transition: slideIndex === 0 ? "none" : "transform ease-in-out 0.4s",
     };
 
     return style;
   };
 
-  const renderSlides = slides => {
+  const renderSlides = (slides) => {
     const lastIndex = slides.length - 1;
 
     return slides.map((slide, index) => {

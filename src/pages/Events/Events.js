@@ -2,15 +2,11 @@ import React from "react";
 
 import "./Events.scss";
 
-import PageHeading from "../../components/PageHeading";
-import PageInfo from "../../components/PageInfo";
-import EventItem from "../../components/EventItem";
+import { PageHeading, PageInfo, EventItem, Animator } from "components";
 
-import Animator from "../../components/Animator";
+import useFetch from "hooks/useFetch";
 
-import useFetch from "../../hooks/useFetch";
-
-import { API } from "../../constants";
+import { API } from "app-constants";
 
 const Events = () => {
   const { isLoading, data, error } = useFetch(API.EVENTS);

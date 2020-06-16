@@ -2,11 +2,7 @@ import React from "react";
 
 import "./Home.scss";
 
-import PageHeading from "../../components/PageHeading";
-import PageParagraph from "../../components/PageParagraph";
-import GalleryGrid from "../../components/GalleryGrid";
-
-import Animator from "../../components/Animator";
+import { PageHeading, PageParagraph, GalleryGrid, Animator } from "components";
 
 const GALLERY_GRID_IMAGES = [
   "asparagus_640.jpg",

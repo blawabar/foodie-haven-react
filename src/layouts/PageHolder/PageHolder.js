@@ -2,16 +2,16 @@ import React, { lazy } from "react";
 
 import { Switch, Route } from "react-router-dom";
 
-import { PATHS } from "../../constants";
+import { PATHS } from "app-constants";
 
-const Home = lazy(() => import("../../pages/Home"));
-const RestaurantMenu = lazy(() => import("../../pages/RestaurantMenu"));
-const Events = lazy(() => import("../../pages/Events"));
-const EventDetails = lazy(() => import("../../pages/EventDetails"));
-const Chef = lazy(() => import("../../pages/Chef"));
-const Gallery = lazy(() => import("../../pages/Gallery"));
-const Contact = lazy(() => import("../../pages/Contact"));
-const ErrorInfo = lazy(() => import("../../pages/ErrorInfo"));
+const Home = lazy(() => import("pages/Home"));
+const RestaurantMenu = lazy(() => import("pages/RestaurantMenu"));
+const Events = lazy(() => import("pages/Events"));
+const EventDetails = lazy(() => import("pages/EventDetails"));
+const Chef = lazy(() => import("pages/Chef"));
+const Gallery = lazy(() => import("pages/Gallery"));
+const Contact = lazy(() => import("pages/Contact"));
+const ErrorInfo = lazy(() => import("pages/ErrorInfo"));
 
 const PageHolder = () => {
   return (

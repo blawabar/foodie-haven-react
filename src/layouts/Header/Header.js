@@ -3,7 +3,7 @@ import { Link, Switch, Route } from "react-router-dom";
 
 import "./Header.scss";
 
-import { PATH_MAP } from "../../constants";
+import { PATH_MAP } from "app-constants";
 
 const Header = ({ location }) => {
   const extractHeaderProps = () => {

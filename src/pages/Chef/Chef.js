@@ -1,17 +1,19 @@
 import React from "react";
 
-import Carousel from "../../components/Carousel";
-import PageHeading from "../../components/PageHeading";
-import PageParagraph from "../../components/PageParagraph";
-import PageInfo from "../../components/PageInfo";
+import {
+  Carousel,
+  PageHeading,
+  PageParagraph,
+  PageInfo,
+  Animator,
+  TYPE,
+} from "components";
 
-import Animator, { TYPE } from "../../components/Animator";
-
-import useFetch from "../../hooks/useFetch";
+import useFetch from "hooks/useFetch";
 
 import "./Chef.scss";
 
-import { API } from "../../constants";
+import { API } from "app-constants";
 
 const Chef = () => {
   const { data, isLoading, error } = useFetch(API.CHEF);

@@ -2,12 +2,9 @@ import React from "react";
 
 import "./Gallery.scss";
 
-import PageHeading from "../../components/PageHeading";
-import MasonryGrid from "../../components/MasonryGrid";
+import { PageHeading, MasonryGrid, Animator } from "components";
 
-import Animator from "../../components/Animator";
-
-const images = [
+const IMAGES = [
   "kitchen_640.jpg",
   "asparagus_640.jpg",
   "cook_640.jpg",
@@ -31,7 +28,7 @@ const Gallery = () => {
     <section className="gallery">
       <PageHeading large>Food and Restaurant Gallery</PageHeading>
       <Animator>
-        <MasonryGrid images={images}></MasonryGrid>
+        <MasonryGrid images={IMAGES}></MasonryGrid>
       </Animator>
     </section>
   );

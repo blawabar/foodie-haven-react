@@ -19,7 +19,7 @@ const typeToAnimationMap = Object.freeze({
   PULL_UP: `${baseClassName} ${pullUpClassName}`,
 });
 
-const Animator = ({ children, animationType = FADE_OUT }) => {
+export const Animator = ({ children, animationType = FADE_OUT }) => {
   const selfRef = useRef(null);
 
   useEffect(() => {
@@ -54,5 +54,3 @@ export const TYPE = Object.freeze({
   PULL_UP,
   FADE_OUT,
 });
-
-export default Animator;

@@ -2,10 +2,10 @@ import React from "react";
 
 import "./GalleryGrid.scss";
 
-import Animator from "../Animator";
+import { Animator } from "components";
 
 const GalleryGrid = ({ images }) => {
-  const generateImageContent = images => {
+  const generateImageContent = (images) => {
     if (Array.isArray(images) && images.length > 0) {
       return images.map((imageName, index) => {
         return (

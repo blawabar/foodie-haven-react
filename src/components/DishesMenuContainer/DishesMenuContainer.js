@@ -2,13 +2,15 @@ import React, { useContext } from "react";
 
 import "./DishesMenuContainer.scss";
 
-import useFetch from "../../hooks/useFetch";
-import DishMenu from "../DishMenu";
-import PageInfo from "../../components/PageInfo";
+import useFetch from "hooks/useFetch";
 
-import { API, DISHES_FILTER_VALUES } from "../../constants";
+import {
+  DishMenu,
+  PageInfo,
+  FilterContext as DishesFilterContext,
+} from "components";
 
-import { FilterContext as DishesFilterContext } from "../../components/FilterList";
+import { API, DISHES_FILTER_VALUES } from "app-constants";
 
 const DishesMenuContainer = () => {
   const { filterValue } = useContext(DishesFilterContext);
