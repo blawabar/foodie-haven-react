@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e38f1a386845b9e2deda201a28c540ac",
+    "revision": "0039b55f32a81e657119ebad33bc5066",
     "url": "/foodie-haven-react/index.html"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodie-haven-react/static/css/9.1ab62b2b.chunk.css"
   },
   {
-    "revision": "f0e83e84efa7fdfc3f7c",
-    "url": "/foodie-haven-react/static/css/main.54333dc6.chunk.css"
+    "revision": "d75be17144633db8ef45",
+    "url": "/foodie-haven-react/static/css/main.9eab9688.chunk.css"
   },
   {
     "revision": "15190129f5b8c828f701",
@@ -88,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodie-haven-react/static/js/9.f06711e1.chunk.js"
   },
   {
-    "revision": "f0e83e84efa7fdfc3f7c",
-    "url": "/foodie-haven-react/static/js/main.bb49a417.chunk.js"
+    "revision": "d75be17144633db8ef45",
+    "url": "/foodie-haven-react/static/js/main.6df85f61.chunk.js"
   },
   {
     "revision": "d095535a8e08d65d8013",
