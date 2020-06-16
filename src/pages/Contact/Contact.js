@@ -2,9 +2,7 @@ import React from "react";
 
 import "./Contact.scss";
 
-import PageHeading from "../../components/PageHeading";
-import ContactInfo from "../../components/ContactInfo";
-import ContactForm from "../../components/ContactForm";
+import { PageHeading, ContactInfo, ContactForm } from "components";
 
 const CONTACT_DETAILS_DATA = [
   {

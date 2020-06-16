@@ -2,9 +2,11 @@ import React from "react";
 
 import "./RestaurantMenu.scss";
 
-import { FilterList as DishesFilterList } from "../../components/FilterList";
-import PageHeading from "../../components/PageHeading/";
-import DishesMenuContainer from "../../components/DishesMenuContainer";
+import {
+  FilterList as DishesFilterList,
+  PageHeading,
+  DishesMenuContainer,
+} from "components";
 
 import { DISHES_FILTER_VALUES } from "app-constants";
 
