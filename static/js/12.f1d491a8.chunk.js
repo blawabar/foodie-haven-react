@@ -1,0 +1,2 @@
+(this["webpackJsonprest-react"]=this["webpackJsonprest-react"]||[]).push([[12],{133:function(e,t,a){},145:function(e,t,a){"use strict";a.r(t);var n=a(0),r=a.n(n),c=(a(133),a(39)),s=a(5),u=function(){return r.a.createElement("section",{className:"restaurant-menu"},r.a.createElement("div",{className:"restaurant-menu__wrapper"},r.a.createElement(c.p,{large:!0},"discover our menu"),r.a.createElement(c.m,{initialValue:s.c.ALL,filterValues:s.c},r.a.createElement(c.j,null))))};a.d(t,"default",(function(){return u}))}}]);
+//# sourceMappingURL=12.f1d491a8.chunk.js.map
