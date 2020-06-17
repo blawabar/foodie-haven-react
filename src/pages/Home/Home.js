@@ -4,12 +4,7 @@ import "./Home.scss";
 
 import { PageHeading, PageParagraph, GalleryGrid, Animator } from "components";
 
-const GALLERY_GRID_IMAGES = [
-  "asparagus_640.jpg",
-  "kitchen_640.jpg",
-  "breakfast_640.jpg",
-  "table_640.jpg",
-];
+import { GALLERY_GRID_IMAGES } from "app-constants";
 
 const Home = () => {
   return (

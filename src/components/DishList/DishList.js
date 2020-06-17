@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./DishList.scss";
 
@@ -16,6 +17,16 @@ const DishList = ({ dishes }) => {
       })}
     </section>
   );
+};
+
+DishList.propTypes = {
+  dishes: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default DishList;

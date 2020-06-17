@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./ContactInfo.scss";
 
@@ -17,6 +18,11 @@ const ContactInfo = ({ title, content }) => {
       })}
     </div>
   );
+};
+
+ContactInfo.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default ContactInfo;

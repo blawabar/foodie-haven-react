@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import "./EventItem.scss";
 
 import { PageParagraph } from "components";
 
-const EventItem = ({ img, title, date, excerpt, id }) => {
+const EventItem = ({ id, img, title, date, excerpt }) => {
   return (
     <div className="event-item">
       <div className="event-item__image-container">
@@ -23,6 +24,14 @@ const EventItem = ({ img, title, date, excerpt, id }) => {
       </section>
     </div>
   );
+};
+
+EventItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
 };
 
 export default EventItem;

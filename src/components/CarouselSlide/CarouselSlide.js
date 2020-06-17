@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./CarouselSlide.scss";
 
@@ -16,6 +17,13 @@ const CarouselSlide = ({ type, img, title, description }) => {
       </div>
     </div>
   );
+};
+
+CarouselSlide.propTypes = {
+  type: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default CarouselSlide;

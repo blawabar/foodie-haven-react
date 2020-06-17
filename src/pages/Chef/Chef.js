@@ -15,6 +15,8 @@ import "./Chef.scss";
 
 import { API } from "app-constants";
 
+import { DataProvider } from "contexts";
+
 const Chef = () => {
   const { data, isLoading, error } = useFetch(API.CHEF);
 
@@ -29,7 +31,9 @@ const Chef = () => {
         <Animator animationType={TYPE.PULL_UP}>
           <section className="chef__daily-routines">
             <PageHeading normal>just daily routines</PageHeading>
-            <Carousel {...data}></Carousel>
+            <DataProvider value={data}>
+              <Carousel />
+            </DataProvider>
           </section>
         </Animator>
         <Animator animationType={TYPE.PULL_UP}>

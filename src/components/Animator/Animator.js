@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
 import "./Animator.scss";
 
@@ -19,7 +20,7 @@ const typeToAnimationMap = Object.freeze({
   PULL_UP: `${baseClassName} ${pullUpClassName}`,
 });
 
-export const Animator = ({ children, animationType = FADE_OUT }) => {
+export const Animator = ({ children, animationType }) => {
   const selfRef = useRef(null);
 
   useEffect(() => {
@@ -48,6 +49,15 @@ export const Animator = ({ children, animationType = FADE_OUT }) => {
       {children}
     </div>
   );
+};
+
+Animator.defaultProps = {
+  animationType: FADE_OUT,
+};
+
+Animator.propTypes = {
+  children: PropTypes.node.isRequired,
+  animationType: PropTypes.oneOf([FADE_OUT, PULL_UP]),
 };
 
 export const TYPE = Object.freeze({

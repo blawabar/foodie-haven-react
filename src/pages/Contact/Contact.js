@@ -4,20 +4,7 @@ import "./Contact.scss";
 
 import { PageHeading, ContactInfo, ContactForm } from "components";
 
-const CONTACT_DETAILS_DATA = [
-  {
-    title: "Reservations",
-    content: ["Please call", "(00) 123-456-789"],
-  },
-  {
-    title: "Address",
-    content: ["Street Name, Number", "City Name, Postal Code, Country Name"],
-  },
-  {
-    title: "Opening hours",
-    content: ["Mon-Thurs: 10:00 - 23:00", "Fri-Sun: 11:00 - 02:00"],
-  },
-];
+import { CONTACT_DETAILS_DATA } from "app-constants";
 
 const renderContactDetails = (data) =>
   data.map((detail, index) => {

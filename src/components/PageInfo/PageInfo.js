@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./PageInfo.scss";
 
@@ -15,6 +16,11 @@ const PageInfo = ({ children, error }) => {
       <h1 className={className}>{children}</h1>
     </div>
   );
+};
+
+PageInfo.propTypes = {
+  children: PropTypes.string.isRequired,
+  error: PropTypes.bool,
 };
 
 export default PageInfo;

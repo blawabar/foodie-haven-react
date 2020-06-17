@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./DishItem.scss";
 
@@ -16,6 +17,12 @@ const DishItem = ({ name, description, price }) => {
       </PageParagraph>
     </div>
   );
+};
+
+DishItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export default DishItem;

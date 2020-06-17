@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
+import PropTypes from "prop-types";
 
 import "./FilterList.scss";
 
@@ -9,24 +10,24 @@ const { Provider } = FilterContext;
 const BTN_CLASS_NAME = "filter-list__btn";
 const IS_SELECTED_SUFFIX = "--is-selected";
 
-const generateBtnClassName = (itemValue, { filterValue }) => {
-  let className = BTN_CLASS_NAME;
-
-  const itemIsSelected = itemValue === filterValue;
-
-  if (itemIsSelected) {
-    className = `${className} ${className}${IS_SELECTED_SUFFIX}`;
-  }
-
-  return className;
-};
-
 export const FilterList = ({ children, initialValue, filterValues }) => {
   const [selectedItem, setSelectedItem] = useState({
     filterValue: initialValue,
   });
 
-  const handleOnFilterChange = (evt) => {
+  const generateBtnClassName = useCallback((itemValue, { filterValue }) => {
+    let className = BTN_CLASS_NAME;
+
+    const itemIsSelected = itemValue === filterValue;
+
+    if (itemIsSelected) {
+      className = `${className} ${className}${IS_SELECTED_SUFFIX}`;
+    }
+
+    return className;
+  }, []);
+
+  const handleOnFilterChange = useCallback((evt) => {
     evt.stopPropagation();
 
     const {
@@ -36,7 +37,7 @@ export const FilterList = ({ children, initialValue, filterValues }) => {
     } = evt;
 
     setSelectedItem({ filterValue });
-  };
+  }, []);
 
   return (
     <>
@@ -55,4 +56,10 @@ export const FilterList = ({ children, initialValue, filterValues }) => {
       <Provider value={selectedItem}>{children}</Provider>
     </>
   );
+};
+
+FilterList.propTypes = {
+  children: PropTypes.element.isRequired,
+  initialValue: PropTypes.string.isRequired,
+  filterValues: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
 };

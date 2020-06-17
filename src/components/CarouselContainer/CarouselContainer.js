@@ -1,11 +1,23 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useContext,
+  useMemo,
+  useCallback,
+} from "react";
 
 import "./CarouselContainer.scss";
 
 import { CarouselSlide } from "components";
+import { DataContext } from "contexts";
 
-const CarouselContainer = ({ slides }) => {
+const CarouselContainer = () => {
+  let { slides } = useContext(DataContext);
+
+  const cloneSlides = useCallback((slides) => [...slides, slides[0]], []);
+  slides = useMemo(() => cloneSlides(slides), [slides, cloneSlides]);
+
   const carouselSlideRef = useRef(null);
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -23,25 +35,25 @@ const CarouselContainer = ({ slides }) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [slideIndex]);
+  }, [slideIndex, slides.length]);
 
-  const generateStyle = (slideIndex) => {
+  const generateStyle = useCallback((slideIndex) => {
     let style = {
       transform: `translateX(-${slideIndex * 100}%)`,
       transition: slideIndex === 0 ? "none" : "transform ease-in-out 0.4s",
     };
 
     return style;
-  };
+  }, []);
 
-  const renderSlides = (slides) => {
+  const renderSlides = useCallback((slides) => {
     const lastIndex = slides.length - 1;
 
     return slides.map((slide, index) => {
       const type = index === lastIndex ? "first-cloned" : "normal";
       return <CarouselSlide type={type} key={index} {...slide} />;
     });
-  };
+  }, []);
 
   return (
     <div className="carousel-container">

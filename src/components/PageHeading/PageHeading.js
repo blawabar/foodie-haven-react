@@ -1,27 +1,29 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./PageHeading.scss";
 
-class Modifiers {
-  static IS_SMALL = "--is-small";
-  static IS_NORMAL = "--is-normal";
-  static IS_LARGE = "--is-large";
-}
+const SCALE_MODIFIERS = Object.freeze({
+  IS_SMALL: "--is-small",
+  IS_NORMAL: "--is-normal",
+  IS_LARGE: "--is-large",
+});
+
 const BASE_CLASS_NAME = "page-heading";
 
-const PageHeading = props => {
+const PageHeading = (props) => {
   const { children, ...scales } = props;
 
-  const generateClassName = scales => {
+  const generateClassName = (scales) => {
     const { small, normal, large } = scales;
     let modifier;
 
     if (small) {
-      modifier = Modifiers.IS_SMALL;
+      modifier = SCALE_MODIFIERS.IS_SMALL;
     } else if (normal) {
-      modifier = Modifiers.IS_NORMAL;
+      modifier = SCALE_MODIFIERS.IS_NORMAL;
     } else if (large) {
-      modifier = Modifiers.IS_LARGE;
+      modifier = SCALE_MODIFIERS.IS_LARGE;
     }
 
     return modifier
@@ -30,6 +32,17 @@ const PageHeading = props => {
   };
 
   return <h2 className={generateClassName(scales)}>{children}</h2>;
+};
+
+PageHeading.defaultProps = {
+  normal: true,
+};
+
+PageHeading.propTypes = {
+  children: PropTypes.string.isRequired,
+  small: PropTypes.bool,
+  normal: PropTypes.bool,
+  large: PropTypes.bool,
 };
 
 export default PageHeading;

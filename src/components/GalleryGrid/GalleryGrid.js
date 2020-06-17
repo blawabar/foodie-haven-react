@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./GalleryGrid.scss";
 
@@ -21,6 +22,10 @@ const GalleryGrid = ({ images }) => {
   return (
     <section className="gallery-grid">{generateImageContent(images)}</section>
   );
+};
+
+GalleryGrid.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default GalleryGrid;

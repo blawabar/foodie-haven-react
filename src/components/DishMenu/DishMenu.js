@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./DishMenu.scss";
 
@@ -13,6 +14,17 @@ const DishMenu = ({ type, dishes }) => {
       <DishList dishes={dishes} />
     </section>
   );
+};
+
+DishMenu.propTypes = {
+  type: PropTypes.string.isRequired,
+  dishes: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default DishMenu;
