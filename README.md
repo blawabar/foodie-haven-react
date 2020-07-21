@@ -2,6 +2,8 @@
 
 This is an example of a SPA template, designed to be used in a restaurant or in any type of a service related to provide meals.
 
+Live demo: [https://blawabar.github.io/foodie-haven-react/](https://blawabar.github.io/foodie-haven-react/)
+
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
